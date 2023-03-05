@@ -1,4 +1,4 @@
-package com.vervyle.lw5_oop;
+package com.vervyle.lw5_oop.controllers;
 
 import com.vervyle.lw5_oop.model.MyIntegerProperty;
 import com.vervyle.lw5_oop.model.ValueModel;
