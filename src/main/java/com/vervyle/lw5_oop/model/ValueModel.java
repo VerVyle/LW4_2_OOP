@@ -3,6 +3,7 @@ package com.vervyle.lw5_oop.model;
 import javafx.beans.InvalidationListener;
 
 import java.io.*;
+import java.util.LinkedList;
 
 public class ValueModel {
 
@@ -142,6 +143,10 @@ public class ValueModel {
             integerPropertyA = (MyIntegerProperty) ois.readObject();
             integerPropertyB = (MyIntegerProperty) ois.readObject();
             integerPropertyC = (MyIntegerProperty) ois.readObject();
+
+            integerPropertyA.setInvalidationListeners(new LinkedList<>());
+            integerPropertyB.setInvalidationListeners(new LinkedList<>());
+            integerPropertyC.setInvalidationListeners(new LinkedList<>());
         }
 
         public ValueModelIO() {
