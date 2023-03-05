@@ -1,10 +1,6 @@
 package com.vervyle.lw5_oop.controllers;
 
-import com.vervyle.lw5_oop.model.MyIntegerProperty;
 import com.vervyle.lw5_oop.model.ValueModel;
-import javafx.beans.InvalidationListener;
-import javafx.beans.Observable;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Slider;
@@ -75,15 +71,9 @@ public class AppController implements Initializable {
         valueFactoryC.setValue(model.getValueC());
         spinner_c.setValueFactory(valueFactoryC);
 
-        spinner_a.setOnMouseClicked(mouseEvent -> {
-            model.updateValueA(spinner_a.getValue());
-        });
-        spinner_b.setOnMouseClicked(mouseEvent -> {
-            model.updateValueB(spinner_b.getValue());
-        });
-        spinner_c.setOnMouseClicked(mouseEvent -> {
-            model.updateValueC(spinner_c.getValue());
-        });
+        spinner_a.setOnMouseClicked(mouseEvent -> model.updateValueA(spinner_a.getValue()));
+        spinner_b.setOnMouseClicked(mouseEvent -> model.updateValueB(spinner_b.getValue()));
+        spinner_c.setOnMouseClicked(mouseEvent -> model.updateValueC(spinner_c.getValue()));
     }
 
     private void initSliders() {
@@ -91,15 +81,9 @@ public class AppController implements Initializable {
         slider_b.setValue(model.getValueB());
         slider_c.setValue(model.getValueC());
 
-        slider_a.setOnMouseReleased(mouseEvent -> {
-            model.updateValueA((int) slider_a.getValue());
-        });
-        slider_b.setOnMouseReleased(mouseEvent -> {
-            model.updateValueB((int) slider_b.getValue());
-        });
-        slider_c.setOnMouseReleased(mouseEvent -> {
-            model.updateValueC((int) slider_c.getValue());
-        });
+        slider_a.setOnMouseReleased(mouseEvent -> model.updateValueA((int) slider_a.getValue()));
+        slider_b.setOnMouseReleased(mouseEvent -> model.updateValueB((int) slider_b.getValue()));
+        slider_c.setOnMouseReleased(mouseEvent -> model.updateValueC((int) slider_c.getValue()));
     }
 
     public void onExit(WindowEvent windowEvent) {

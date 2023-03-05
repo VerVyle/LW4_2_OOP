@@ -27,9 +27,7 @@ public class MyIntegerProperty implements Observable, Serializable {
 
     public void update(Integer value) {
         this.value = value;
-        invalidationListeners.forEach(invalidationListener -> {
-            invalidationListener.invalidated(this);
-        });
+        invalidationListeners.forEach(invalidationListener -> invalidationListener.invalidated(this));
     }
 
     @Override
