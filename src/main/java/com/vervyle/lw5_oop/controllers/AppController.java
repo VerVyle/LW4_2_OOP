@@ -57,10 +57,6 @@ public class AppController implements Initializable {
             if (keyEvent.getCode().equals(KeyCode.ENTER))
                 model.updateValueC(Integer.parseInt(text_c.getText()));
         });
-
-        model.addListenerToA(observable -> text_a.setText(model.getValueA().toString()));
-        model.addListenerToB(observable -> text_b.setText(model.getValueB().toString()));
-        model.addListenerToC(observable -> text_c.setText(model.getValueC().toString()));
     }
 
     private void initSpinners() {
@@ -88,10 +84,6 @@ public class AppController implements Initializable {
         spinner_c.setOnMouseClicked(mouseEvent -> {
             model.updateValueC(spinner_c.getValue());
         });
-
-        model.addListenerToA(observable -> spinner_a.getValueFactory().setValue(model.getValueA()));
-        model.addListenerToB(observable -> spinner_b.getValueFactory().setValue(model.getValueB()));
-        model.addListenerToC(observable -> spinner_c.getValueFactory().setValue(model.getValueC()));
     }
 
     private void initSliders() {
@@ -108,10 +100,6 @@ public class AppController implements Initializable {
         slider_c.setOnMouseReleased(mouseEvent -> {
             model.updateValueC((int) slider_c.getValue());
         });
-
-        model.addListenerToA(observable -> slider_a.setValue(model.getValueA()));
-        model.addListenerToB(observable -> slider_b.setValue(model.getValueB()));
-        model.addListenerToC(observable -> slider_c.setValue(model.getValueC()));
     }
 
     public void onExit(WindowEvent windowEvent) {
@@ -122,10 +110,25 @@ public class AppController implements Initializable {
         }
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    private void initModel() {
         model = new ValueModel();
 
+        model.addListenerToA(observable -> text_a.setText(model.getValueA().toString()));
+        model.addListenerToA(observable -> spinner_a.getValueFactory().setValue(model.getValueA()));
+        model.addListenerToA(observable -> slider_a.setValue(model.getValueA()));
+
+        model.addListenerToB(observable -> text_b.setText(model.getValueB().toString()));
+        model.addListenerToB(observable -> spinner_b.getValueFactory().setValue(model.getValueB()));
+        model.addListenerToB(observable -> slider_b.setValue(model.getValueB()));
+
+        model.addListenerToC(observable -> text_c.setText(model.getValueC().toString()));
+        model.addListenerToC(observable -> spinner_c.getValueFactory().setValue(model.getValueC()));
+        model.addListenerToC(observable -> slider_c.setValue(model.getValueC()));
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        initModel();
         initTextFields();
         initSpinners();
         initSliders();
