@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.vervyle.lw5_oop/com.vervyle.lw5_oop.HelloApplication</mainClass>
+                            <mainClass>com.vervyle.lw5_oop/com.vervyle.lw5_oop.MyApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
