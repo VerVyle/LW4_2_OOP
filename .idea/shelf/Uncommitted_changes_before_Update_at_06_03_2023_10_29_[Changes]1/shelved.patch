@@ -1,0 +1,112 @@
+Index: src/main/java/com/vervyle/lw5_oop/model/MyIntegerProperty.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.vervyle.lw5_oop.model;\r\n\r\nimport javafx.beans.InvalidationListener;\r\nimport javafx.beans.Observable;\r\n\r\nimport java.io.Serializable;\r\nimport java.util.LinkedList;\r\nimport java.util.List;\r\n\r\npublic class MyIntegerProperty implements Observable, Serializable {\r\n\r\n    volatile private Integer value;\r\n    private transient List<InvalidationListener> invalidationListeners;\r\n\r\n    public MyIntegerProperty(Integer value) {\r\n        this.value = value;\r\n        invalidationListeners = new LinkedList<>();\r\n    }\r\n\r\n    public void setInvalidationListeners(List<InvalidationListener> invalidationListeners) {\r\n        this.invalidationListeners = invalidationListeners;\r\n    }\r\n\r\n    public Integer getValue() {\r\n        return value;\r\n    }\r\n\r\n    public void update(Integer value) {\r\n        this.value = value;\r\n        invalidationListeners.forEach(invalidationListener -> invalidationListener.invalidated(this));\r\n    }\r\n\r\n    @Override\r\n    public void addListener(InvalidationListener invalidationListener) {\r\n        invalidationListeners.add(invalidationListener);\r\n    }\r\n\r\n    @Override\r\n    public void removeListener(InvalidationListener invalidationListener) {\r\n        invalidationListeners.remove(invalidationListener);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/vervyle/lw5_oop/model/MyIntegerProperty.java b/src/main/java/com/vervyle/lw5_oop/model/MyIntegerProperty.java
+--- a/src/main/java/com/vervyle/lw5_oop/model/MyIntegerProperty.java	
++++ b/src/main/java/com/vervyle/lw5_oop/model/MyIntegerProperty.java	
+@@ -8,7 +8,6 @@
+ import java.util.List;
+ 
+ public class MyIntegerProperty implements Observable, Serializable {
+-
+     volatile private Integer value;
+     private transient List<InvalidationListener> invalidationListeners;
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"951df6e4-b87a-49d6-a889-1341785fdb10\" name=\"Changes\" comment=\"refactored AppController.java code\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/vervyle/lw5_oop/controllers/AppController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/vervyle/lw5_oop/controllers/AppController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/vervyle/lw5_oop/model/MyIntegerProperty.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/vervyle/lw5_oop/model/MyIntegerProperty.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"importingSettings\">\r\n      <MavenImportingSettings>\r\n        <option name=\"workspaceImportEnabled\" value=\"true\" />\r\n      </MavenImportingSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2MXjH8k0Jq8I1Dhv4vyreL7yh8R\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/wwwdo/Desktop/LW5_OOP&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Unnamed\" type=\"Application\" factoryName=\"Application\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.vervyle.lw5_oop.HelloApplication\" />\r\n      <module name=\"LW5_OOP\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"951df6e4-b87a-49d6-a889-1341785fdb10\" name=\"Changes\" comment=\"\" />\r\n      <created>1677920739506</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1677920739506</updated>\r\n      <workItem from=\"1677920740663\" duration=\"554000\" />\r\n      <workItem from=\"1678004413511\" duration=\"10179000\" />\r\n      <workItem from=\"1678015101977\" duration=\"261000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Initial Commit\">\r\n      <created>1678013834002</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1678013834002</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Initial Commit\">\r\n      <created>1678013941985</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1678013941985</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"fixed IO in ValueModel.java\">\r\n      <created>1678014371005</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1678014371005</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"refactored AppController.java code\">\r\n      <created>1678014566416</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1678014566416</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Initial Commit\" />\r\n    <MESSAGE value=\"fixed IO in ValueModel.java\" />\r\n    <MESSAGE value=\"refactored AppController.java code\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"refactored AppController.java code\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -6,7 +6,8 @@
+   <component name="ChangeListManager">
+     <list default="true" id="951df6e4-b87a-49d6-a889-1341785fdb10" name="Changes" comment="refactored AppController.java code">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vervyle/lw5_oop/controllers/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vervyle/lw5_oop/controllers/AppController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/vervyle/lw5_oop/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vervyle/lw5_oop/MyApplication.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/vervyle/lw5_oop/model/MyIntegerProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vervyle/lw5_oop/model/MyIntegerProperty.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -39,26 +40,26 @@
+   <component name="ProjectViewState">
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/wwwdo/Desktop/LW5_OOP&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "last_opened_file_path": "C:/Users/timur/IdeaProjects/LW5_OOP",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.0",
++    "project.structure.side.proportion": "0.0",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RunManager">
+-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="com.vervyle.lw5_oop.HelloApplication" />
++    <configuration name="MyApplication" type="Application" factoryName="Application" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="com.vervyle.lw5_oop.MyApplication" />
+       <module name="LW5_OOP" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+@@ -76,6 +77,9 @@
+       <workItem from="1677920740663" duration="554000" />
+       <workItem from="1678004413511" duration="10179000" />
+       <workItem from="1678015101977" duration="261000" />
++      <workItem from="1678071965712" duration="165000" />
++      <workItem from="1678072847348" duration="184000" />
++      <workItem from="1678080562901" duration="1000" />
+     </task>
+     <task id="LOCAL-00001" summary="Initial Commit">
+       <created>1678013834002</created>
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n\r\n    <groupId>com.vervyle</groupId>\r\n    <artifactId>LW5_OOP</artifactId>\r\n    <version>1.0-SNAPSHOT</version>\r\n    <name>LW5_OOP</name>\r\n\r\n    <properties>\r\n        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\r\n        <junit.version>5.9.1</junit.version>\r\n    </properties>\r\n\r\n    <dependencies>\r\n        <dependency>\r\n            <groupId>org.openjfx</groupId>\r\n            <artifactId>javafx-controls</artifactId>\r\n            <version>19</version>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.openjfx</groupId>\r\n            <artifactId>javafx-fxml</artifactId>\r\n            <version>19</version>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>org.junit.jupiter</groupId>\r\n            <artifactId>junit-jupiter-api</artifactId>\r\n            <version>${junit.version}</version>\r\n            <scope>test</scope>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.junit.jupiter</groupId>\r\n            <artifactId>junit-jupiter-engine</artifactId>\r\n            <version>${junit.version}</version>\r\n            <scope>test</scope>\r\n        </dependency>\r\n    </dependencies>\r\n\r\n    <build>\r\n        <plugins>\r\n            <plugin>\r\n                <groupId>org.apache.maven.plugins</groupId>\r\n                <artifactId>maven-compiler-plugin</artifactId>\r\n                <version>3.10.1</version>\r\n                <configuration>\r\n                    <source>19</source>\r\n                    <target>19</target>\r\n                </configuration>\r\n            </plugin>\r\n            <plugin>\r\n                <groupId>org.openjfx</groupId>\r\n                <artifactId>javafx-maven-plugin</artifactId>\r\n                <version>0.0.8</version>\r\n                <executions>\r\n                    <execution>\r\n                        <!-- Default configuration for running with: mvn clean javafx:run -->\r\n                        <id>default-cli</id>\r\n                        <configuration>\r\n                            <mainClass>com.vervyle.lw5_oop/com.vervyle.lw5_oop.HelloApplication</mainClass>\r\n                            <launcher>app</launcher>\r\n                            <jlinkZipName>app</jlinkZipName>\r\n                            <jlinkImageName>app</jlinkImageName>\r\n                            <noManPages>true</noManPages>\r\n                            <stripDebug>true</stripDebug>\r\n                            <noHeaderFiles>true</noHeaderFiles>\r\n                        </configuration>\r\n                    </execution>\r\n                </executions>\r\n            </plugin>\r\n        </plugins>\r\n    </build>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	
++++ b/pom.xml	
+@@ -60,7 +60,7 @@
+                         <!-- Default configuration for running with: mvn clean javafx:run -->
+                         <id>default-cli</id>
+                         <configuration>
+-                            <mainClass>com.vervyle.lw5_oop/com.vervyle.lw5_oop.HelloApplication</mainClass>
++                            <mainClass>com.vervyle.lw5_oop/com.vervyle.lw5_oop.MyApplication</mainClass>
+                             <launcher>app</launcher>
+                             <jlinkZipName>app</jlinkZipName>
+                             <jlinkImageName>app</jlinkImageName>

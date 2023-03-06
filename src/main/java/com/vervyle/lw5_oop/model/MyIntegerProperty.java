@@ -8,7 +8,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class MyIntegerProperty implements Observable, Serializable {
-
     volatile private Integer value;
     private transient List<InvalidationListener> invalidationListeners;
 

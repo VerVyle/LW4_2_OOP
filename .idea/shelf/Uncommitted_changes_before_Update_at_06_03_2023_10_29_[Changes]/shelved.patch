@@ -1,0 +1,23 @@
+Index: src/main/java/com/vervyle/lw5_oop/HelloApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/vervyle/lw5_oop/HelloApplication.java b/src/main/java/com/vervyle/lw5_oop/MyApplication.java
+rename from src/main/java/com/vervyle/lw5_oop/HelloApplication.java
+rename to src/main/java/com/vervyle/lw5_oop/MyApplication.java
+--- a/src/main/java/com/vervyle/lw5_oop/HelloApplication.java	
++++ b/src/main/java/com/vervyle/lw5_oop/MyApplication.java	
+@@ -8,10 +8,10 @@
+ 
+ import java.io.IOException;
+ 
+-public class HelloApplication extends Application {
++public class MyApplication extends Application {
+     @Override
+     public void start(Stage stage) throws IOException {
+-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
++        FXMLLoader fxmlLoader = new FXMLLoader(MyApplication.class.getResource("hello-view.fxml"));
+         Scene scene = new Scene(fxmlLoader.load(), 540, 270);
+         stage.setTitle("LW5 OOP");
+         stage.setScene(scene);

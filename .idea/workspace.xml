@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="951df6e4-b87a-49d6-a889-1341785fdb10" name="Changes" comment="refactored some code">
+    <list default="true" id="951df6e4-b87a-49d6-a889-1341785fdb10" name="Changes" comment="refactored AppController.java code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vervyle/lw5_oop/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vervyle/lw5_oop/MyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vervyle/lw5_oop/controllers/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vervyle/lw5_oop/controllers/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vervyle/lw5_oop/model/MyIntegerProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vervyle/lw5_oop/model/MyIntegerProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/vervyle/lw5_oop/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/vervyle/lw5_oop/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +46,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/wwwdo/Desktop/LW5_OOP&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/timur/IdeaProjects/LW5_OOP&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -57,8 +58,8 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="MyApplication" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.vervyle.lw5_oop.MyApplication" />
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.vervyle.lw5_oop.HelloApplication" />
       <module name="LW5_OOP" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -75,9 +76,9 @@
       <updated>1677920739506</updated>
       <workItem from="1677920740663" duration="554000" />
       <workItem from="1678004413511" duration="10179000" />
-      <workItem from="1678015101977" duration="313000" />
-      <workItem from="1678024056639" duration="237000" />
-      <workItem from="1678080315712" duration="92000" />
+      <workItem from="1678015101977" duration="261000" />
+      <workItem from="1678103751371" duration="132000" />
+      <workItem from="1678103894148" duration="3604000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1678013834002</created>
@@ -107,14 +108,7 @@
       <option name="project" value="LOCAL" />
       <updated>1678014566416</updated>
     </task>
-    <task id="LOCAL-00005" summary="refactored some code">
-      <created>1678015376530</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1678015376530</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +118,17 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="fixed IO in ValueModel.java" />
     <MESSAGE value="refactored AppController.java code" />
-    <MESSAGE value="refactored some code" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored some code" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored AppController.java code" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vervyle/lw5_oop/model/ValueModel.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

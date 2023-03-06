@@ -1,6 +1,8 @@
 package com.vervyle.lw5_oop.controllers;
 
 import com.vervyle.lw5_oop.model.ValueModel;
+import javafx.beans.Observable;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Slider;
@@ -8,6 +10,7 @@ import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.WindowEvent;
 
 import java.net.URL;
@@ -53,6 +56,10 @@ public class AppController implements Initializable {
             if (keyEvent.getCode().equals(KeyCode.ENTER))
                 model.updateValueC(Integer.parseInt(text_c.getText()));
         });
+
+        text_a.focusedProperty().addListener(observable -> model.updateValueA(Integer.parseInt(text_a.getText())));
+        text_b.focusedProperty().addListener(observable -> model.updateValueB(Integer.parseInt(text_b.getText())));
+        text_c.focusedProperty().addListener(observable -> model.updateValueC(Integer.parseInt(text_c.getText())));
     }
 
     private void initSpinners() {

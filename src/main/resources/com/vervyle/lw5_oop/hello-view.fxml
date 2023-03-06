@@ -51,17 +51,17 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </GridPane.margin>
                   </TextField>
-                  <Spinner fx:id="spinner_a" editable="true" prefHeight="25.0" prefWidth="191.0" GridPane.rowIndex="1">
+                  <Spinner fx:id="spinner_a" prefHeight="25.0" prefWidth="191.0" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </GridPane.margin>
                   </Spinner>
-                  <Spinner fx:id="spinner_b" editable="true" prefHeight="25.0" prefWidth="198.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Spinner fx:id="spinner_b" prefHeight="25.0" prefWidth="198.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </GridPane.margin>
                   </Spinner>
-                  <Spinner fx:id="spinner_c" editable="true" prefHeight="25.0" prefWidth="277.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <Spinner fx:id="spinner_c" prefHeight="25.0" prefWidth="277.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </GridPane.margin>
